@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'lists/new' #データの取得(ページ自体もデータ)
+  post 'lists'  => 'lists#create' #(新しいデータの作成)
+
+
   get 'lists/new'
   get 'lists/index'
   get 'lists/show'

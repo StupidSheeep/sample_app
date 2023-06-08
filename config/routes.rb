@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   get 'lists' => 'lists#index' #3-3
   #3-4 .../lists/1や...lists/3に該当する
   get 'lists/:id' => 'lists#show', as: 'list'
-
-  get 'lists/edit'
+  get 'lists/:id/edit' => 'lists#edit', as: 'edit_list'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

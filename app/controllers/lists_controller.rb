@@ -15,17 +15,18 @@ class ListsController < ApplicationController
   end
 
   def index
-    @lists = List.all
+    @lists = List.all #3-3
   end
 
   def show
+    @list = List.find(params[:id])
   end
 
   def edit
   end
 
   private
-  # ストロングパラメータ
+  #3-2 ストロングパラメータ
   def list_params
     params.require(:list).permit(:title, :body)
   end

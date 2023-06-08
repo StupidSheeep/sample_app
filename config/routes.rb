@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post 'lists'  => 'lists#create' #3-2(新しいデータの作成)
   get 'lists' => 'lists#index' #3-3
   #3-4 .../lists/1や...lists/3に該当する
-  get 'lists/:id' => 'lists#show'
+  get 'lists/:id' => 'lists#show', as: 'list'
 
   get 'lists/edit'
 

@@ -19,10 +19,11 @@ class ListsController < ApplicationController
   end
 
   def show
-    @list = List.find(params[:id])
+    @list = List.find(params[:id]) #3-4
   end
 
   def edit
+    @list =List.find(params[:id]) #3-5
   end
 
   private

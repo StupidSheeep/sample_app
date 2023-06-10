@@ -26,6 +26,12 @@ class ListsController < ApplicationController
     @list =List.find(params[:id]) #3-5
   end
 
+  def update #3-5
+    list = List.find(params[:id])
+    list.update(list_params)
+    redirect_to list_path(list.id)
+  end
+
   private
   #3-2 ストロングパラメータ
   def list_params
